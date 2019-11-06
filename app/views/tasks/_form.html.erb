@@ -19,11 +19,7 @@
   </div>
 
   <div>
-    <% if params[:controller] == 'tasks' && params[:action] == 'new' %>
-    <%= form.submit "新增任務",class:'btn btn-danger btn-lg' %> 
-    <% else %> 
-    <%= form.submit "儲存修改",class:'btn btn-danger btn-lg' %> 
-    <% end %>
-    <%= link_to "取消", root_path, class: 'btn btn-success btn-lg' %>
+      <%= form.submit button_text,class:'btn btn-danger btn-lg' %> 
+      <%= link_to "取消", root_path, class: 'btn btn-success btn-lg' %>
   </div>
 <% end %>
