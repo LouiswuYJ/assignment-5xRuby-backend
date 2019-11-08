@@ -6,5 +6,9 @@ module TasksHelper
        "儲存修改"
     end
   end
+
+  def task_enum
+    Task.priorities.keys
+  end
 end
 

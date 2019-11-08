@@ -19,6 +19,21 @@
   </div>
 
   <div>
+    <%= form.label :priority, ' 優先等級:' %>
+    <%= form.select :priority, options_for_select([ task_enum[0], task_enum[1], task_enum[2]]) %>
+  </div>
+
+  <div>
+    <%= form.label :start_time, '開始時間：'%>
+    <%= form.datetime_field :start_time %>
+  </div>
+
+  <div>
+    <%= form.label :end_time, '截止時間：'%>
+    <%= form.datetime_field :end_time%>
+  </div>
+
+  <div>
       <%= form.submit button_text,class:'btn btn-danger btn-lg' %> 
       <%= link_to "取消", root_path, class: 'btn btn-success btn-lg' %>
   </div>
