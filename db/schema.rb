@@ -22,9 +22,9 @@ ActiveRecord::Schema.define(version: 2019_11_08_043852) do
     t.datetime "updated_at", null: false
     t.datetime "start_time"
     t.datetime "end_time"
-    t.string "priority"
-    t.string "tag"
-    t.string "status", default: "pending"
+    t.integer "priority", default: 0
+    t.integer "tag"
+    t.integer "status", default: 0
   end
 
 end
