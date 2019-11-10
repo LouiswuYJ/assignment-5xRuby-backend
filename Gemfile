@@ -44,6 +44,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'travis', '~> 1.8', '>= 1.8.10'
   gem 'factory_bot_rails'
+  gem 'rails-i18n'
 end
 
 group :development do
