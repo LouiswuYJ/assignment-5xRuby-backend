@@ -5,6 +5,11 @@ class Task < ApplicationRecord
   enum priority: { low: 0, middle: 1, high: 2 }
   enum status: { pending: 0, processing: 1, done: 2 }
 
+  validates :title, presence: true
+  validates :description, presence: true
+  validates :start_time, presence: true
+  validates :end_time, presence: true
+
   # tag_list 的 getter
   # .map(&:name) 等於 .map{|x| x.name } 
   def tag_list
