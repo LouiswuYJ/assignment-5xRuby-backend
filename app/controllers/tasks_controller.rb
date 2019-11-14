@@ -17,7 +17,7 @@ class TasksController < ApplicationController
 
   def update
     if @task.update(task_params)
-      redirect_to root_path, notice: '編輯任務成功！'
+      redirect_to root_path, notice: t('.notice')
     else
       render :edit  
     end
@@ -26,7 +26,7 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params)
     if @task.save
-      redirect_to root_path, notice: '新增任務成功！'
+      redirect_to root_path, notice: t('.notice')
     else 
       render :new
     end
@@ -34,7 +34,7 @@ class TasksController < ApplicationController
 
   def destroy
     @task.destroy
-    redirect_to root_path, notice: '刪除任務成功！'
+    redirect_to root_path, notice: t('.notice')
   end
 
   private 

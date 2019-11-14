@@ -1,8 +1,8 @@
-<h1>任務詳細資料</h1>
+<h1><%= t('views.task_detail') %></h1>
 
-任務名稱:<%= @task.title %>
-任務描述:<%= @task.description %>
+<%= t('views.tasks.title') %><%= @task.title %>
+<%= t('views.tasks.description') %><%= @task.description %>
 
 <div>
-  <%= link_to "回首頁", root_path, class: 'btn btn-warning btn-lg' %>
+  <%= link_to t('views.back_home'), root_path, class: 'btn btn-warning btn-lg' %>
 </div>

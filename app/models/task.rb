@@ -1,5 +1,5 @@
 class Task < ApplicationRecord
-  has_many :task_tags
+  has_many :task_tags, dependent: :destroy
   has_many :tags, through: :task_tags
 
   enum priority: { low: 0, middle: 1, high: 2 }
