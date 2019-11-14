@@ -41,6 +41,9 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'hirb-unicode', '~> 0.0.5'
+  gem 'rspec-rails'
+  gem 'travis', '~> 1.8', '>= 1.8.10'
+  gem 'factory_bot_rails'
 end
 
 group :development do
