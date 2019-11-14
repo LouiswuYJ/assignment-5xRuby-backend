@@ -19,7 +19,7 @@
 
   <div>
     <%= form.label :priority, t('views.tasks.priority') %>
-    <%= form.select :priority, options_for_select([ t("views.priority.#{task_enum[0]}"), t("views.priority.#{task_enum[1]}"), t("views.priority.#{task_enum[2]}")]) %>
+    <%= form.select :priority, priority_selection %>
   </div>
 
   <div>
