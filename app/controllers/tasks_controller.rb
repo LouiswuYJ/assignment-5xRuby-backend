@@ -2,7 +2,7 @@ class TasksController < ApplicationController
   before_action :find_params, only: [:show, :edit, :update, :destroy]
 
   def index
-    @tasks = Task.order(created_at: :desc)
+    @tasks = Task.includes(:tags).order(created_at: :desc)
   end
 
   def new
