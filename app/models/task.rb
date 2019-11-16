@@ -5,8 +5,8 @@ class Task < ApplicationRecord
   enum priority: { low: 0, middle: 1, high: 2 }
   enum status: { pending: 0, processing: 1, done: 2 }
 
-  validates :title, presence: true
-  validates :description, presence: true
+  validates :title, presence: true, length: { maximum: 10, too_long: "#{I18n.t('views.too_long')}" }
+  validates :description, presence: true, length: { maximum: 30, too_long: "#{I18n.t('views.too_long')}" }
   validates :start_time, presence: true
   validates :end_time, presence: true
 

@@ -34,11 +34,11 @@
 
   <div>
     <%= form.label :tag_list, t('views.tasks.tag_list')%>
-    <%= form.text_field :tag_list, placeholder:'aaa, bbb, ccc'%>
+    <%= form.text_field :tag_list, placeholder: t('views.tasks.tag_placeholder')%>
   </div>
 
   <div>
-      <%= form.submit button_text,class:'btn btn-danger btn-lg' %> 
-      <%= link_to t('views.cancel'), root_path, class: 'btn btn-success btn-lg' %>
+    <%= form.submit button_text,class:'btn btn-danger btn-lg' %> 
+    <%= link_to t('views.cancel'), root_path, class: 'btn btn-success btn-lg' %>
   </div>
 <% end %>

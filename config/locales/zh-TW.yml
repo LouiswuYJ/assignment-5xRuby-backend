@@ -1,4 +1,12 @@
 zh-TW:
+  attributes:
+    title: 任務名稱
+    description: 任務描述
+    priority: 優先等級
+    start_time: 開始時間
+    end_time: 截止時間
+    tag_list: 標籤
+    name: 標籤
   views:
     edit_task: "編輯"
     create_task: "送出"
@@ -12,6 +20,7 @@ zh-TW:
     home: "任務首頁"
     task_detail: '任務詳細資料'
     cancel: '取消'
+    too_long: 字數過長(最多 %{count} 個字)
     tasks:
       title: "任務名稱:"
       description: "任務描述:"
@@ -25,6 +34,7 @@ zh-TW:
       delete: "刪除"
       status: "狀態:"
       priority: "優先等級"
+      tag_placeholder: '交報吿, 出國, 運動'
     priority:
       low: "低"
       middle: "中"

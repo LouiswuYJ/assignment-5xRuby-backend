@@ -1,9 +1,9 @@
 module TasksHelper
   def button_text
-    if controller.action_name == "new"
-       t('views.create_task')
-    else 
+    if controller.action_name == "edit"
        t('views.save_task')
+    else 
+       t('views.create_task')
     end
   end
 
