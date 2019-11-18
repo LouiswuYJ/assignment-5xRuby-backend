@@ -19,7 +19,7 @@ class Task < ApplicationRecord
   # tag_list 的 setter 
   # 找到該Task下所有的tags後用split分開成陣列，再針對每個element去做first_or_create (Find the First Instance in the Table. If None Exists, Create One.)
   def tag_list=(names)
-    self.tags = names.split(',').map do |item|
+    self.tags = names.split(', ').map do |item|
       Tag.where(name: item.strip).first_or_create!
     end
   end
