@@ -8,7 +8,7 @@ module TasksHelper
   end
 
   def priority_selection
-    [["低", 'low'], ["中", "middle"], ["高", "high"]]
+    [[t("views.priority.low"), "low"], [t("views.priority.middle"), "middle"], [t("views.priority.high"), "high"]]
   end
 
   def task_status(status)

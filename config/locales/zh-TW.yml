@@ -7,6 +7,8 @@ zh-TW:
     end_time: 截止時間
     tag_list: 標籤
     name: 標籤
+  model: 
+    too_long: 字數過長(最多 %{count} 個字)
   views:
     edit_task: "編輯"
     create_task: "送出"
@@ -20,7 +22,6 @@ zh-TW:
     home: "任務首頁"
     task_detail: '任務詳細資料'
     cancel: '取消'
-    too_long: 字數過長(最多 %{count} 個字)
     tasks:
       title: "任務名稱:"
       description: "任務描述:"
