@@ -1,0 +1,57 @@
+zh-TW:
+  attributes:
+    title: 任務名稱
+    description: 任務描述
+    priority: 優先等級
+    start_time: 開始時間
+    end_time: 截止時間
+    tag_list: 標籤
+    name: 標籤
+  model: 
+    too_long: 字數過長(最多 %{count} 個字)
+  views:
+    edit_task: "編輯"
+    create_task: "送出"
+    delete_task: "刪除"
+    save_task: "儲存修改"
+    show_task: "任務內容"
+    new_task: "新增任務"
+    placeholder: "此欄位必填"
+    confirm_massage: '確定要刪除任務嗎？'
+    back_home: "回首頁"
+    home: "任務首頁"
+    task_detail: '任務詳細資料'
+    cancel: '取消'
+    tasks:
+      title: "任務名稱:"
+      description: "任務描述:"
+      start_time: '開始時間:'
+      end_time: '截止時間:'
+      date: "日期:"
+      deadline: "任務時間:"
+      tag_list: '標籤:'
+      edit: "編輯"
+      show: "查看"
+      delete: "刪除"
+      status: "狀態:"
+      priority: "優先等級"
+      tag_placeholder: '交報吿, 出國, 運動'
+    priority:
+      low: "低"
+      middle: "中"
+      high: "高"
+    status:
+      pending: "待進行"
+      processing: "進行中"
+      done: "已完成"  
+    priority:
+      low: "低"
+      middle: "中"
+      high: "高"
+  tasks:
+    create:
+      notice: "新增任務成功"
+    update:
+      notice: "編輯任務成功"
+    destroy:
+      notice: "刪除成功"

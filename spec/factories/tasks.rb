@@ -1,13 +1,9 @@
 FactoryBot.define do
   factory :task do
-    title { "sport" }
-    description { "badminton" }
+    sequence(:title) { |x| "task#{x}"}
+    sequence(:description) { |x| "my task description#{x}" }
     start_time { "2019-11-11 16:30:08 +0800" }
     end_time { "2019-11-12 16:30:08 +0800" }
     tag_list { "aaa,bbb,ccc" }
-
-    trait :no_title do
-      title { nil }
-    end
   end
 end

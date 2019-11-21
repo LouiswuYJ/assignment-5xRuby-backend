@@ -1,20 +1,20 @@
 <%= flash[:notice] %>
-<h1>任務首頁</h1>
+<h1><%= t('views.home') %></h1>
 
 <% @tasks.each do |task| %>
   <ul>
     <li>
-      任務名稱: <%= link_to task.title, task_path(task) %>
-      任務描述: <%= task.description %>
-      優先等級: <%= task.priority %>
-      任務狀態: <%= task.status %>
-      標籤: <%= task.tag_list %>
-      開始時間: <%= task.start_time%>
-      截止時間: <%= task.end_time%>
-      <%= link_to "更新", edit_task_path(task), class: 'btn btn-success btn-sm' %>
-      <%= link_to "刪除", task_path(task), method: 'delete', data: {confirm: '確定要刪除嗎？'}, class: 'btn btn-dark btn-sm' %>
+      <%= t('views.tasks.title') %> <%= link_to task.title, task_path(task), class: 'title' %>
+      <%= t('views.tasks.description') %> <%= task.description %>
+      <%= t('views.tasks.priority') %>: <%= task_priority(task.priority) %>
+      <%= t('views.tasks.status') %> <%= task_status(task.status) %>
+      <%= t('views.tasks.tag_list') %><%= task.tag_list %>
+      <%= t('views.tasks.start_time') %> <%= l(task.start_time, format: '%F %A %H:%M')%>
+      <%= t('views.tasks.end_time') %> <%= l(task.end_time, format: '%F %A %H:%M')%>
+      <%= link_to t('views.edit_task'), edit_task_path(task), class: 'btn btn-success btn-sm' %>
+      <%= link_to t('views.delete_task'), task_path(task), method: 'delete', data: {confirm: t('views.confirm_massage') }, class: 'btn btn-dark btn-sm' %>
     </li>
   </ul>
 <% end %>
 
-<%= link_to "新增任務", new_task_path , class: 'btn btn-info btn-lg'%>
+<%= link_to t('views.new_task'), new_task_path , class: 'btn btn-info btn-lg'%>
